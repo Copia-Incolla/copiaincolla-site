@@ -12,6 +12,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+a:focus, a:hover {
+    color:white;
+}
+
 .mainColor{
     color: #e52186 !important;
 }
@@ -111,11 +115,11 @@ body {
 
 @media screen and (max-width: 767px) {
     .title {
-        font-size: 50px;
+        font-size: 34px;
     }
     
     .description{
-        font-size: 18px;
+        font-size: 14px;
         margin: 15px auto;
     }
 }
@@ -123,20 +127,46 @@ body {
 /* FOOTER */
 footer{
     height:200px;
-    padding-top:40px;
+    padding-top:50px;
     text-align:center;
     font-size: 20px;
-    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.5);
-    box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .copyright{
     text-align:center;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     padding:15px;
-    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.3);
-    box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn-social {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 45px;
+    color: #ffffff;
+}
+.btn-outline {
+    margin-top: 15px;
+    border: solid 2px white;
+    font-size: 20px;
+    color: white;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+}
+
+.btn-outline:hover{
+    background: white;
+    color: #e52186
 }
 
 @media screen and (max-width: 767px) {
