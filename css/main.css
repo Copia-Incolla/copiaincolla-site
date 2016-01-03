@@ -16,6 +16,12 @@ a:focus, a:hover {
     color:white;
 }
 
+/* Remove styling from ios */
+a[href^="tel"]{
+    color:inherit;
+    text-decoration:none;
+}
+
 .mainColor{
     color: #e52186 !important;
 }
@@ -113,7 +119,7 @@ a:focus, a:hover {
 .bigContainer{
     width: 100%;
     min-height: 550px;
-    height: 100%;
+    height: 100vh;
     padding: 20px;
     text-align: center;
     position: relative;
