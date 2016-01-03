@@ -1,3 +1,15 @@
+/* ANDROID HACK 
+ * see: http://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome
+ */
+html{
+    overflow: hidden;
+}
+
+body{
+    overflow-y: scroll;
+}
+/* //ANDROID HACK */
+
 html,body{
     margin:0;
     width:100%;
