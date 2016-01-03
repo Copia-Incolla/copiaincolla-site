@@ -23,7 +23,7 @@ a:focus, a:hover {
 /* HEADER */
 
 .header {
-    padding: 10px 0;
+    padding: 2px 0;
     background: white;
     position: fixed;
     width: 100%;
@@ -47,7 +47,7 @@ a:focus, a:hover {
 }
 .header .main-nav .nav .nav-item a {
     font-size: 14px;
-    padding: 15px 10px;
+    padding: 20px 10px;
     color: #e52186;
 }
 
@@ -82,8 +82,7 @@ a:focus, a:hover {
 
 .bigPicture{
     color:white;
-    overflow: hidden; /* added for pseudo-element */
-    position: relative; /* added for pseudo-element */
+    padding-top: 50px;
 }
 
 .indexCopiaFoto {
@@ -102,7 +101,7 @@ a:focus, a:hover {
     width: 100%;
     min-height: 550px;
     height: 100%;
-    padding:50px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -138,11 +137,11 @@ a:focus, a:hover {
 
 @media screen and (max-width: 767px) {
     .title {
-        font-size: 34px;
+        font-size: 40px;
     }
     
     .description{
-        font-size: 14px;
+        font-size: 16px;
         margin: 15px auto;
     }
 }
@@ -197,4 +196,17 @@ footer{
         margin-top:20px;
         margin-bottom:20px;
     }
+}
+
+/* Button */
+.btn-default, .btn-default.active, .btn-default:active, .btn-default:active:focus, .btn-default:focus{
+    color: white;
+    background-color: #e52186;
+    border-color: #DC0071;
+}
+
+.btn-default:hover {
+    color: white;
+    background-color: #E64E9D;
+    border-color: #DC0071;
 }
