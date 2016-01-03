@@ -69,6 +69,10 @@ a:focus, a:hover {
     background-color: #FFF;
 }
 
+.navbar-toggle{
+    margin-top: 13px;
+}
+
 @media screen and (max-width: 767px) {
     .header .main-nav .nav .nav-item a {
         font-size: 16px;
@@ -78,7 +82,7 @@ a:focus, a:hover {
     }
 }
 
-/* PARALLAX IMAGES */
+/* IMAGES */
 
 .bigPicture{
     color:white;
@@ -92,6 +96,11 @@ a:focus, a:hover {
 
 .indexCelRotto {
     background: url('../img/iPhoneBroken.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.indexPcLento{
+    background: url('../img/BlueScreen.jpg') no-repeat center center;
     background-size: cover;
 }
 
@@ -130,6 +139,11 @@ a:focus, a:hover {
     margin: 165px auto 0 auto;
 }
 
+/* Reduce top offset in description panels */
+.backWhite .title{
+    margin-top: 100px;
+}
+
 .description{
     font-size: 24px;
     margin: 30px auto;
@@ -166,6 +180,10 @@ a:focus, a:hover {
         font-size: 16px;
         margin: 15px auto;
     }
+}
+
+.leftText{
+    text-align: left;
 }
 
 /* FOOTER */
