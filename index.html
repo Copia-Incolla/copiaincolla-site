@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="ABeltramo">
-    <title>Copia &amp; Incolla Store | Verbania</title>
+    <title>Copia&amp;incolla Store</title>
     <meta property="og:type" content="article" />
     <meta property="og:url" content="http://copiaincollastore.com/" />
     <meta property="og:title" content="" />
@@ -20,9 +20,12 @@
     <link rel="stylesheet" href="css/main.css">
     <!-- Font -->
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- Animations -->
+    <link href='css/animate.min.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <header id="header" class="header">  
+    <!-- Header -->
+    <nav id="header" class="navbar navbar-fixed-top header">  
         <div class="container">            
             <p class="logo pull-left">
                 <a class="scrollto" href="#promo">
@@ -43,28 +46,133 @@
                 <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item sr-only active"><a class="scrollto" href="#promo">Home</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#about">Prezzi</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#features">Franchising</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#docs">Punti vendita</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#license">Ebay</a></li>                        
-                        <li class="nav-item"><a class="scrollto" href="#contact">Contatti</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#Prezzi">Prezzi</a></li>
+                        <li class="nav-item"><a href="#franchising">Franchising</a></li>
+                        <li class="nav-item"><a href="#puntivendita">Punti vendita</a></li>
+                        <li class="nav-item"><a href="http://stores.ebay.it/copiaincollastore">Ebay</a></li>                        
+                        <li class="nav-item"><a href="#contatti">Contatti</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
-        </div>
-    </header>
+        </div><!-- //container -->
+    </nav><!-- //Header -->
     
-    <div class="bigContainer backMainColor">
-        <div class="title">Copia&Incolla</div>
+    <!-- Main content -->
+    <div class="bigContainer bigPicture indexCopiaFoto">
+        <div class="title mainColor">Copia&amp;incolla</div>
         <div class="description">Assistenza e riparazione Smartphone, Tablet, iPad, Android, iPhone, PC e MAC.</div>
+        <div class="footerBigCont">
+            <span class="glyphicon glyphicon-chevron-down scrollto" href="#ChiSiamo" style="font-size:30px;" aria-hidden="true"></span>
+        </div>
+    </div>
+    
+    <div id="ChiSiamo" class="bigContainer backWhite">
+        <div class="title">Chi siamo</div>
+        <div class="description">
+            Copia&Incolla nasce nel 200X a Verbania come punto vendita e riparazione di computer. 
+            <br>Nel tempo ci siamo specializzati nella riparazione di Smartphone e Notebook. 
+            <br>Vuoi aprire anche tu un negozio Copia&Incolla?
+            <br><br><a class="btn btn-default btn-lg wow tada" href="#franchising" role="button">Franchising</a>
+        </div>
+    </div>
+    
+    <div id="Prezzi" class="bigContainer bigPicture indexCelRotto">
+        <div class="title mainColor">Telefono rotto?</div>
+        <div class="description">Riparazione iPhone in almeno un ora.</div>
     </div>
     
     <div class="bigContainer backWhite">
-        <div class="title">Chi siamo?</div>
+        <div class="title">Riparazione schermo</div>
+        <div class="description container" style="text-align:right;">
+            <div>
+                <span class="col-xs-6">iPhone 4</span> 
+                <span class="col-xs-6 leftText">XX,xx€</span>
+            </div>
+            <div>
+                <span class="col-xs-6 ">iPhone 4S</span> 
+                <span class="col-xs-6 leftText">XX,xx€</span>
+            </div>
+            <div>
+                <span class="col-xs-6">iPhone 5</span> 
+                <span class="col-xs-6 leftText">XX,xx€</span>
+            </div>
+            <div>
+                <span class="col-xs-6">iPhone 6</span> 
+                <span class="col-xs-6 leftText">XX,xx€</span>
+            </div>
+            <div>
+                <span class="col-xs-6">iPhone 6S</span> 
+                <span class="col-xs-6 leftText">XX,xx€</span>
+            </div>
+        </div>
+        <div style="font-size:15px; margin-top:10px;"><span class="glyphicon glyphicon-asterisk"></span> I prezzi possono variare in base alla disponibilità del mercato.</div>
     </div>
+    
+    <div id="Prezzi" class="bigContainer bigPicture indexPcLento">
+        <div class="title mainColor">PC lento?</div>
+        <div class="description">Pulizia malware, formattazione, installazione software</div>
+    </div>
+    
+    <div class="bigContainer backWhite">
+        <div class="title">Riparazioni Notebook</div>
+        <div class="description container" style="margin-top:40px; text-align:right;">
+            <div>
+                <span class="col-xs-6">Pulizia virus</span> 
+                <span class="col-xs-6 leftText">30,00€</span>
+            </div>
+            <div>
+                <span class="col-xs-6">Formattazione</span> 
+                <span class="col-xs-6 leftText">60,00€</span>
+            </div>
+            <div>
+                <span class="col-xs-6">Ripristino OSX</span> 
+                <span class="col-xs-6 leftText">60,00€</span>
+            </div>
+        </div>
+        <div style="font-size:20px; margin-top:40px;"><span class="glyphicon glyphicon-hand-right"></span> Eseguiamo inoltre assistenza a domicilio e riparazione componentistica notebook e Mac</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="backMainColor">
+        <div class="col-xs-12 col-sm-4">
+            COPIA&amp;INCOLLA
+            <br>Via Paolo Casana 4
+            <br>28921 Verbania (VB)
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <ul class="list-inline wow fadeIn">              
+                <li>
+                    <a href="https://www.facebook.com/copiaincollastore" class="btn-social btn-outline">
+                        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contatti" class="btn-social btn-outline">
+                        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="http://stores.ebay.it/copiaincollastore" class="btn-social btn-outline">
+                        <span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+             <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 0323 404822
+            <br><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> 342 0308116
+            <br>copiaincollastore@gmail.com
+        </div>
+    </footer>
+    <div class="copyright backMainColorDark">Copyright © <a href="https://github.com/ABeltramo">ABeltramo</a> 2016</div>
     
     <!-- Librerie -->
     <script type='text/javascript' src="js/jquery-2.1.4.min.js"></script>
     <script type='text/javascript' src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/effects.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script>new WOW().init();</script>
 </body>
 </html>

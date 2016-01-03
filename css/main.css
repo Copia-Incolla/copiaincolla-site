@@ -12,6 +12,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+a:focus, a:hover {
+    color:white;
+}
+
 .mainColor{
     color: #e52186 !important;
 }
@@ -19,9 +23,8 @@ body {
 /* HEADER */
 
 .header {
-    padding: 10px 0;
+    padding: 2px 0;
     background: white;
-    position: fixed;
     width: 100%;
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
@@ -42,8 +45,8 @@ body {
 }
 .header .main-nav .nav .nav-item a {
     font-size: 14px;
-    padding: 15px 10px;
-    color: #e52186 !important;
+    padding: 20px 10px;
+    color: #e52186;
 }
 
 .miniLogo{
@@ -51,13 +54,69 @@ body {
     margin-top:10px;
 }
 
-/* PAGINE */
+.navbar-toggle{
+    background-color: #e52186 !important;
+}
+
+.navbar-toggle span{
+    background-color:white;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #FFF;
+}
+
+.navbar-toggle{
+    margin-top: 13px;
+}
+
+@media screen and (max-width: 767px) {
+    .header .main-nav .nav .nav-item a {
+        font-size: 16px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left:20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px){
+    header .container {
+        width: 100%;
+    }
+}
+
+/* IMAGES */
+
+.bigPicture{
+    color:white;
+    padding-top: 50px;
+}
+
+.indexCopiaFoto {
+    background: url('../img/NegozioVB.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.indexCelRotto {
+    background: url('../img/iPhoneBroken.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.indexPcLento{
+    background: url('../img/BlueScreen.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* PAGES */
 
 .bigContainer{
     width: 100%;
+    min-height: 550px;
     height: 100%;
-    padding:50px;
+    padding: 20px;
     text-align: center;
+    position: relative;
 }
 
 .backWhite{
@@ -65,8 +124,17 @@ body {
     color: #e52186;
 }
 
+.backWhite .description{
+    color: black;
+}
+
 .backMainColor{
     background: #e52186;
+    color: white;
+}
+
+.backMainColorDark{
+    background: #BD0278;
     color: white;
 }
 
@@ -76,18 +144,107 @@ body {
     margin: 165px auto 0 auto;
 }
 
+/* Reduce top offset in description panels */
+.backWhite .title{
+    margin-top: 100px;
+}
+
 .description{
     font-size: 24px;
     margin: 30px auto;
 }
 
+.footerBigCont{
+    bottom:10px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    -webkit-animation: bounce 4s 2s infinite;
+    animation: bounce 4s 0.5s infinite;
+}
+
 @media screen and (max-width: 767px) {
     .title {
-        font-size: 50px;
+        font-size: 40px;
     }
     
     .description{
-        font-size: 18px;
+        font-size: 16px;
         margin: 15px auto;
     }
+}
+
+.leftText{
+    text-align: left;
+}
+
+/* FOOTER */
+footer{
+    height:200px;
+    padding-top:50px;
+    text-align:center;
+    font-size: 20px;
+}
+
+.copyright{
+    text-align:center;
+    padding:15px;
+    -webkit-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.copyright a{
+    color: white;
+}
+
+.btn-social {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 45px;
+    color: #ffffff;
+}
+.btn-outline {
+    margin-top: 15px;
+    border: solid 2px white;
+    font-size: 20px;
+    color: white;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+}
+
+.btn-outline:hover{
+    background: white;
+    color: #e52186
+}
+
+@media screen and (max-width: 767px) {
+    footer{
+        height: 440px;
+        padding-bottom:20px;
+    }
+    footer div{
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+}
+
+/* Button */
+.btn-default, .btn-default.active, .btn-default:active, .btn-default:active:focus, .btn-default:focus{
+    color: white;
+    background-color: #e52186;
+    border-color: #DC0071;
+}
+
+.btn-default:hover {
+    color: white;
+    background-color: #E64E9D;
+    border-color: #DC0071;
 }
