@@ -2,6 +2,7 @@ html,body{
     margin:0;
     width:100%;
     height: 100%;
+    min-height:100%;
 }
 
 body {
@@ -119,7 +120,7 @@ a[href^="tel"]{
 .bigContainer{
     width: 100%;
     min-height: 550px;
-    height: 100vh;
+    height: 100%;
     padding: 20px;
     text-align: center;
     position: relative;
