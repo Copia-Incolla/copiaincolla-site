@@ -25,12 +25,10 @@ a:focus, a:hover {
 .header {
     padding: 2px 0;
     background: white;
-    position: fixed;
     width: 100%;
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-    z-index: 99;
 }
 
 .header .main-nav .navbar-collapse {
