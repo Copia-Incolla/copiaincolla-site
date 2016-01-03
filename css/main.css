@@ -139,7 +139,7 @@ a:focus, a:hover {
     position: absolute;
     bottom: 20px;
     -webkit-animation: bounce 4s 2s infinite;
-    animation: bounce 4s 0.5s infinite;
+    animation: bounce 4s 1s infinite;
 }
 
 @keyframes bounce {
