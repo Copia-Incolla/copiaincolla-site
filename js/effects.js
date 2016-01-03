@@ -1,12 +1,12 @@
-$(".navbar-collapse ul li a[href^='#']").on('click', function(e) {
+$(".scrollto").on('click', function(e) {
  
-        target = this.hash;
+        target = $(this).attr("href");
        // prevent default anchor click behavior
        e.preventDefault();
  
        // animate
        $('html, body').animate({
-           scrollTop: $(this.hash).offset().top
+           scrollTop: $(target).offset().top
          }, 500, function(){
  
            // when done, add hash to url
