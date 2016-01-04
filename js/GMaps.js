@@ -10,7 +10,8 @@ function initializeGMap(){
       mapTypeId:google.maps.MapTypeId.ROADMAP,
       disableDefaultUI: false,
       scrollwheel: false, 
-      };
+      draggable: false
+    };
 
     var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
