@@ -22,11 +22,6 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <!-- Animations -->
     <link href='css/animate.min.css' rel='stylesheet' type='text/css'>
-    <style>
-        #Contatti h4{
-            line-height: 30px;
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -61,38 +56,32 @@
     </nav><!-- //Header -->
     
     <!-- Main content -->
-    <div id="googleMap" class="bigContainer" style="min-height:90%;"></div>
-    
-    <div id="Contatti" class="bigContainer backWhite">
-        <div class="footerBigCont" style="bottom:auto; top:20px;">
-            <span class="glyphicon glyphicon-chevron-down scrollto" href="#Contatti" style="font-size:30px;" aria-hidden="true"></span>
-        </div>
-        <div class="title">Contatti</div>
-        <div class="description container">
-            <div class="col-xs-12 col-md-4">
-                <h1 class="mainColor">Verbania</h1>
-                <h4>
-                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 0323 404822
-                <br><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Via Paolo Casana, 4
-                <br>copiaincollastore@gmail.com
-                </h4>
-            </div> 
-            <div class="col-xs-12 col-md-4">
-                <h1 class="mainColor">Arona</h1>
-                <h4>
-                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 0322 091631
-                <br><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Corso Repubblica, 108
-                <br>arona@copiaincollastore.com
-                </h4>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <h1 class="mainColor">Terni</h1>
-                <h4>
-                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 0744 460220
-                <br><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Via delle conce, 33
-                <br>terni@copiaincollastore.com
-                </h4>
-            </div>
+    <div class="bigContainer backWhite">
+        <div class="title">Franchising</div>
+        <div class="description">
+            Sei interessato ad aprire un negozio Copia&incolla nella tua città?
+            <br>Inserisci un indirizzo mail per poter ricevere i dettagli su come fare.
+            <div class="col-lg-8 col-lg-offset-2">
+				<form action="" method="POST" name="sentMessage" id="contactForm" novalidate="">
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>Email</label>
+							<input type="email" name="_replyto" class="form-control" placeholder="Email" id="email" required="">
+				        </div>
+					</div>
+					<div>
+						<input type="hidden" name="_subject" value="Nuova mail dal sito">
+						<input type="text" name="_gotcha" style="display:none">
+                    </div>
+					<br>
+					<div id="success"></div>
+					<div class="row">
+						<div class="form-group col-xs-12">
+							<button type="submit" class="btn btn-default btn-lg">Invia</button>
+						</div>
+					</div>
+				</form>
+			</div>
         </div>
     </div>
     
@@ -136,7 +125,7 @@
     <script type='text/javascript' src="js/jquery-2.1.4.min.js"></script>
     <script type='text/javascript' src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/effects.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
-    <script type='text/javascript' src="js/GMaps.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script>new WOW().init();</script>
 </body>
 </html>
