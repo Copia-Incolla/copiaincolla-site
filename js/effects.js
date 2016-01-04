@@ -25,7 +25,8 @@ $(function(){
   }
   
   function resizeBackground(){
-    var height = jQuery(window).height() + 60;
+    console.log("Android device");
+    var height = jQuery(window).height();
     $(".bigContainer").css("height",height+"px");
   }
 });
