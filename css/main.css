@@ -98,6 +98,7 @@ a[href^="tel"]{
 .bigPicture{
     color:white;
     padding-top: 50px;
+    z-index: 10 !important;
 }
 
 .indexCopiaFoto {
@@ -119,11 +120,13 @@ a[href^="tel"]{
 
 .bigContainer{
     width: 100%;
-    min-height: 100%;
+    min-height: 90%;
     height: auto;
     padding: 20px;
     text-align: center;
     position: relative;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    z-index: 20;
 }
 
 .backWhite{
@@ -162,18 +165,35 @@ a[href^="tel"]{
 }
 
 .footerBigCont{
-    bottom:10px;
+    top:-27px;
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
+    margin: 0 auto auto;
+    left:0;
     right: 0;
 }
 
 .footerBigCont .glyphicon{
-    -webkit-animation: bounce 4s 2s infinite;
-    animation: bounce 4s 0.5s infinite;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    border-radius: 50%;
+    font-size: 20px;
+    height: 55px;
+    line-height: 55px;
+    min-width: 0;
+    overflow: hidden;
+    padding: 0;
+    vertical-align: middle;
+    width: 55px;
+    color: #e52186;
+    /*-webkit-animation: bounce 2s 0.5s infinite;
+    animation: bounce 2s 0.5s infinite;*/
     cursor: pointer;
+}
+
+.footerBigCont .glyphicon:before{
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 3px;
 }
 
 .footerBigCont .glyphicon:hover{
@@ -272,6 +292,18 @@ footer{
     border-color: #DC0071;
 }
 
+.btn-alert, .btn-alert.active, .btn-alert:active, .btn-alert:active:focus, .btn-alert:focus{
+    color: #e52186;
+    background-color: white;
+    border-color: white;
+}
+
+.btn-alert:hover {
+    color: #e52186;
+    background-color: white;
+    border-color: white;
+}
+
 /* FORM */
 .form-control{
     height:auto;
@@ -331,4 +363,15 @@ footer{
 
 form .row:first-child .floating-label-form-group {
     border-top: 1px solid #eee;
+}
+
+/* Full Height Video */
+.fullVideo{
+    position: absolute; 
+    left: 50%; 
+    top: 50%; 
+    -webkit-transform: translateX(-50%) translateY(-50%); 
+    transform: translateX(-50%) translateY(-50%); 
+    min-height: 100%; 
+    max-height: 100%;
 }
