@@ -71,7 +71,7 @@
         <div class="col-lg-8 col-lg-offset-2">
 				<form action="//formspree.io/beltramo.ale@gmail.com" method="POST" name="sentMessage" id="contactForm" novalidate="">
 					<div class="row control-group">
-						<div class="form-group col-xs-12 floating-label-form-group controls">
+						<div class="form-group col-xs-12 floating-label-form-group controls wow pulse">
 							<label>Email</label>
 							<input type="email" name="_replyto" class="form-control" placeholder="Email" id="email" required="">
 				        </div>
@@ -146,6 +146,10 @@
             else 
                 myVideo.pause(); 
         });
+        
+        $(myVideo).on("ended",function(){
+            scrollTo("#info");
+        })
         
         $(".scrollto").on("click",function(){
             myVideo.pause();
