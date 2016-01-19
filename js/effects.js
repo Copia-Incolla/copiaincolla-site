@@ -31,7 +31,7 @@ $(function(){
   function resizeBackground(){
     console.log("Android device");
     var height = jQuery(window).height();
-    $(".bigContainer").css("minHeight",height+"px");
+    $(".bigContainer").css("minHeight",height-70+"px");
   }
 });
 /* //ANDROID HACK */
