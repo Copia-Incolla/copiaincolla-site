@@ -22,6 +22,13 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <!-- Animations -->
     <link href='css/animate.min.css' rel='stylesheet' type='text/css'>
+    <!-- SWAL -->
+    <link href="css/sweetalert.css" rel='stylesheet' type="text/css">
+    <style>
+        .ripAdded{
+            list-style-type: none;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -60,7 +67,7 @@
         <div class="title">Stato riparazione</div>
         <div class="description container">
             <p>Inserisci il tuo numero di telefono per vedere in tempo reale qual'è lo stato della riparazione presso i nostri centri di riparazione.</p>
-            <form class="form-inline" action="#">
+            <div class="form-inline">
               <div class="form-group">
                 <label class="sr-only" for="exampleInputAmount">Numero di telefono</label>
                 <div class="input-group">
@@ -71,13 +78,11 @@
                 <button class="btn btn-default btn-lg" id="searchBtn">
                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Cerca
                 </button>
-            </form>
+            </div>
             
             <div class="col-xs-12 col-sm-6 col-sm-offset-3" style="margin-top:50px; text-align:left;">
-                <ul class="list-group">
-                  <li class="list-group-item list-group-item-danger">iPhone5S</li>
-                  <li class="list-group-item list-group-item-warning">Samsung S5</li>
-                  <li class="list-group-item list-group-item-success">MacBook pro</li>
+                <ul class="list-group" id="riparazioni">
+                  <li class="list-group-item" style="display:none">Modello</li>
                 </ul>
             </div>
         </div>
@@ -126,17 +131,40 @@
     <script type='text/javascript' src="js/jquery-2.1.4.min.js"></script>
     <script type='text/javascript' src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/effects.js"></script>
+    <script type="text/javascript" src="js/sweetalert.min.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script>new WOW().init();</script>
     <script>
+    
+    var risultati;
+    
     $("#searchBtn").click(function(){
         var nTel = $("#nTel").val();
         $.getJSON("https://john.copiaincollafranchising.it:1982/api/usr/"+nTel+"?callback=?",function(response){
-            var risultati = response["Rows"];
-            for(rip in risultati){
-                console.log(risultati[rip]);
+            risultati = response["Rows"];
+            if(risultati.length == 0){
+                swal("Non trovato", "Il numero di telefono inserito non ha restituito nessun risultato.", "error");
+                return;
+            }
+            //Rimuovo tutte le riparazioni precedentemente inserite
+            $(".ripAdded").remove();
+            for(i in risultati){
+                var rip = risultati[i];
+                console.log(rip);
+                var ripDiv = $("#riparazioni li:first").clone();
+                $(ripDiv).show()
+                    .text(rip.Modello)
+                    .addClass("list-group-item-success")
+                    .addClass("ripAdded")
+                    .attr("id",i)
+                    .appendTo("#riparazioni");
             }
         });
+        
+        $("#riparazioni").on("click",".ripAdded",function(){
+            var i = parseInt($(this).attr("id"));
+            swal(risultati[i].Modello,risultati[i].Lavori,"success");
+        })
     })
     </script>
 </body>
