@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ABeltramo">
+    <title>Copia&amp;incolla</title>
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://copiaincollastore.com/" />
+    <meta property="og:title" content="" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <meta name="description"  content="Vendita e Assistenza Computer anche a domicilio - Riparazione iPhone Apple Mac Bose Sound System" />
+    <meta name="keywords"  content="riparazione pc,riparazione iphone,riparazione computer,assistenza pc,assistenza computer,copia incolla,copia incolla store,copia e incolla,copia &amp; incolla,giovanni calderoni,verbania intra,riparazione,riparazione ipad,riparazione iphone,riparazione pc,iphone, ipad,assistenza pc,corsi per pc,corsi per computer,corsi per imparare,corsi di computer,corsi per windows,bose,bose sound,bose accessori,bose acustica,rivenditore bose,rivendita bose,articoli bose,assistenza a domicilio,vendita pc,vendita mac,vendita bose,usato pc,usato mac,computer usati,mac usati,iphone usati,accessori per mac,accessori per iphone,accessori per ipad" />
+    
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Calendar -->
+    <link href="css/responsive-calendar.css" rel='stylesheet' type='text/css'>
+    <!-- Animations -->
+    <link href='css/animate.min.css' rel='stylesheet' type='text/css'>
+    <style>
+        #Contatti h4{
+            line-height: 30px;
+        }
+    </style>
+</head>
+  <body class="container" style="margin:0;width:100%;height:100%;">
+      <!-- Responsive calendar - START -->
+    	<div class="responsive-calendar">
+        <div class="controls">
+            <a class="pull-left" data-go="prev">
+              <div class="btn btn-primary"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></div>
+            </a>
+            <h4><span data-head-year></span> <span data-head-month></span></h4>
+            <a class="pull-right" data-go="next">
+              <div class="btn btn-primary"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+            </a>
+        </div><hr/>
+        <div class="day-headers">
+          <div class="day header">Lun</div>
+          <div class="day header">Mar</div>
+          <div class="day header">Mer</div>
+          <div class="day header">Gio</div>
+          <div class="day header">Ven</div>
+          <div class="day header">Sab</div>
+          <div class="day header">Dom</div>
+        </div>
+        <div class="days" data-group="days">
+          
+        </div>
+      </div>
+      <!-- Responsive calendar - END -->
+    <!-- Librerie -->
+    <script type='text/javascript' src="js/jquery-2.1.4.min.js"></script>
+    <script type='text/javascript' src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/responsive-calendar.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".responsive-calendar").responsiveCalendar({
+          time: '2013-05',
+          events: {
+            "2013-04-30": {"number": 5, "url": "http://w3widgets.com/responsive-slider"},
+            "2013-04-26": {"number": 1, "url": "http://w3widgets.com"}, 
+            "2013-05-03":{"number": 1}, 
+            "2013-06-12": {}},
+          onDayClick: function(events) {
+            console.log(events);
+          }
+        });
+      });
+    </script>
+</body>
+</html>
