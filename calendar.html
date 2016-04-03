@@ -91,7 +91,9 @@
         </div>
         <div class="modal-body">
           <div class="container-fluid pad10">
-              
+            <ul class="list-group">
+              <li id="evento" style="display:none" class="list-group-item">asd</li>
+            </ul>  
          </div>
         </div>
       </div>
@@ -119,20 +121,35 @@
         });
       }
       
+      function getDayEvents(day,month,year){
+        $.getJSON("https://john.copiaincollafranchising.it:1982/api/calendar/get/"+ day +"/" + month +"/" + year +"/?callback=?",function(res){
+          if(!res.Error){
+            console.log(res.Rows);
+            $('#modalEvent .modal-title').text(day+"/"+month+"/"+year);
+            $('#modalEvent').modal('show');
+            $(".deleteMe").remove(); //Clear all
+            for(obj of res.Rows){
+              var ev = $("#modalEvent #evento").clone();
+                ev.text(obj.Titolo)
+                .attr("id"," ")
+                .addClass("deleteMe")
+                .css("backgroundColor",obj.Colore)
+                .css("color",obj.TextColor)
+                .show();
+              $("#modalEvent .list-group").prepend(ev);
+            }
+          }
+        });
+      }
+      
       $(document).ready(function () {
         var today = new Date();
         $(".responsive-calendar").responsiveCalendar({
-          time: today.getFullYear()+"-"+today.getMonth(),
-          onDayClick: function(events) {
-            $('#modalEvent .modal-title').text($(this).data("day")+"/"+$(this).data("month")+"/"+$(this).data("year"));
-            $('#modalEvent').modal('show');
-          },
-          onMonthChange: function(){
-            console.log(this.currentMonth+1+" "+this.currentYear);
-            getMonthEvents(this.currentMonth+1,this.currentYear);
-          }
+          time: today.getFullYear()+"-"+(today.getMonth()+1),
+          onDayClick: function(events) {getDayEvents($(this).data("day"),$(this).data("month"),$(this).data("year"));},
+          onMonthChange: function(){getMonthEvents(this.currentMonth+1,this.currentYear);}
         });
-        getMonthEvents(today.getMonth(),today.getFullYear());
+        getMonthEvents(today.getMonth()+1,today.getFullYear());
       });
     </script>
 </body>
