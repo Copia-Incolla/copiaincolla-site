@@ -63,7 +63,7 @@
             <a class="pull-left" data-go="prev">
               <div class="btn btn-default"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></div>
             </a>
-            <h1><span data-head-year></span> <span data-head-month></span></h1>
+            <h1><span data-head-month></span> <span data-head-year></span></h1>
             <a class="pull-right" data-go="next">
               <div class="btn btn-default"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
             </a>
@@ -102,22 +102,37 @@
     <script type='text/javascript' src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/responsive-calendar.min.js"></script>
     <script type="text/javascript">
+      
+      function getMonthEvents(month,year){
+        $.getJSON("https://john.copiaincollafranchising.it:1982/api/calendar/count/"+ month +"/" + year +"/?callback=?",function(res){
+          if(!res.Error){
+            var events = {};
+            for(obj of res.Rows){
+              events[year+"-"+month+"-"+obj.giorno] = {"number":obj.eventi};
+            }
+            // Wait for end animation
+            setTimeout(function(){
+              $('.responsive-calendar').responsiveCalendar('edit',events);
+              console.log(events);
+            }, 500);
+          }
+        });
+      }
+      
       $(document).ready(function () {
+        var today = new Date();
         $(".responsive-calendar").responsiveCalendar({
-          time: '2013-05',
-          events: {
-            "2013-04-30": {"number": 5, "url": "http://w3widgets.com/responsive-slider"},
-            "2013-04-26": {"number": 1, "url": "http://w3widgets.com"}, 
-            "2013-05-03":{"number": 1}, 
-            "2013-05-20":{"number": 2}, 
-            "2013-05-21":{"number": 3},
-            "2013-05-22":{"number": 7},
-            "2013-06-12": {}},
+          time: today.getFullYear()+"-"+today.getMonth(),
           onDayClick: function(events) {
             $('#modalEvent .modal-title').text($(this).data("day")+"/"+$(this).data("month")+"/"+$(this).data("year"));
             $('#modalEvent').modal('show');
+          },
+          onMonthChange: function(){
+            console.log(this.currentMonth+1+" "+this.currentYear);
+            getMonthEvents(this.currentMonth+1,this.currentYear);
           }
         });
+        getMonthEvents(today.getMonth(),today.getFullYear());
       });
     </script>
 </body>
