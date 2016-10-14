@@ -136,7 +136,6 @@ a[href^="tel"]{
 
 .backWhite .description{
     color: black;
-    text-shadow: 1px 1px 3px black;
 }
 
 .backMainColor{
@@ -366,19 +365,4 @@ footer{
 
 .floating-label-form-group-with-focus label {
     color: #ffffff;
-}
-
-/* Full Height Video */
-.fullVideo{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    min-height: 100%;
-    max-height: 100%;
-}
-
-.fullVideo.loading{
-    background: white url(../img/loader.gif) center center no-repeat;
 }
