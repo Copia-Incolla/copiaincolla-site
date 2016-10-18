@@ -178,6 +178,15 @@ a[href^="tel"]{
     margin: 165px auto 0 auto;
 }
 
+.positionPointer{
+  color: #e52186;
+}
+
+.positionPointer:hover{
+  color:#e52186;
+  text-decoration: underline;
+}
+
 /* Reduce top offset in description panels */
 .backWhite .title{
     margin-top: 100px;
