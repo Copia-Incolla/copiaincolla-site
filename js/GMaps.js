@@ -1,3 +1,4 @@
+var marker;
 var posizioni = {
   "CopiaVerbania"     : [new google.maps.LatLng(45.9390656,8.57494), "Verbania"],
   "CopiaArona"        : [new google.maps.LatLng(45.7570879,8.5576672), "Arona"],
@@ -5,8 +6,10 @@ var posizioni = {
   "CopiaOmegna"       : [new google.maps.LatLng(45.8779096,8.4064306), "Omegna"],
   "CopiaCastelFranco" : [new google.maps.LatLng(45.6831699,11.9400613), "Castel Franco Veneto"]
 }
-var marker;
-google.maps.event.addDomListener(window, 'load', initializeGMap("CopiaVerbania"));
+
+$(function() {
+  initializeGMap("CopiaVerbania");
+});
 
 
 function initializeGMap(posizione){
