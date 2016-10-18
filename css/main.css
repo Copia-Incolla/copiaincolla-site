@@ -61,6 +61,30 @@ a[href^="tel"]{
     margin-top:10px;
 }
 
+.miniLogo-xs{
+  height: 35px;
+  margin-top: 5px;
+}
+
+.logo-xs{
+  margin:0;
+}
+
+.item-xs{
+  font-weight: normal;
+  margin-left: 8px;
+}
+
+.item-xs a{
+  font-weight: normal;
+  margin-right: 10px;
+  color: #e52186;
+}
+
+.item-xs .glyphicon{
+  font-size:20px;
+}
+
 .navbar-toggle{
     background-color: #e52186 !important;
 }
