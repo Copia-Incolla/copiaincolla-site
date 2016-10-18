@@ -182,7 +182,7 @@ a[href^="tel"]{
   color: #e52186;
 }
 
-.positionPointer:hover{
+.positionPointer:hover, .positionPointer:active, .positionPointer:visited{
   color:#e52186;
   text-decoration: underline;
 }
