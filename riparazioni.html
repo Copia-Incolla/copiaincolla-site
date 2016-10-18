@@ -30,36 +30,54 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <nav id="header" class="navbar navbar-fixed-top header">
-        <div class="container">
-            <p class="logo pull-left">
-                <a href="index.html">
-                    <span class="logo-title">
-                        <img class="miniLogo" src="img/LogoMin.png">
-                    </span>
-                </a>
-            </p><!--//logo-->
-            <nav id="main-nav" class="main-nav navbar-right" role="navigation">
-                <div class="navbar-header">
-                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button><!--//nav-toggle-->
-                </div><!--//navbar-header-->
-                <div class="navbar-collapse collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="scrollto" href="#Prezzi">Riparazioni</a></li>
-                        <li class="nav-item"><a href="franchising.html">Franchising</a></li>
-                        <li class="nav-item"><a href="http://stores.ebay.it/copiaincollastore">Ebay</a></li>
-                        <li class="nav-item"><a href="contatti.html">Contatti</a></li>
-                    </ul><!--//nav-->
-                </div><!--//navabr-collapse-->
-            </nav><!--//main-nav-->
-        </div><!-- //container -->
-    </nav><!-- //Header -->
+  <!-- Header LARGE-->
+  <nav id="header" class="navbar navbar-fixed-top header hidden-xs">
+      <div class="container">
+          <p class="logo pull-left">
+              <a href="index.html">
+                  <span class="logo-title">
+                      <img class="miniLogo" src="img/LogoMin.png">
+                  </span>
+              </a>
+          </p><!--//logo-->
+          <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+              <div class="navbar-collapse collapse" id="navbar-collapse">
+                  <ul class="nav navbar-nav">
+                      <li class="nav-item"><a href="index.html#Prezzi">Riparazioni</a></li>
+                      <li class="nav-item"><a href="franchising.html">Franchising</a></li>
+                      <li class="nav-item"><a href="http://stores.ebay.it/copiaincollastore">Ebay</a></li>
+                      <li class="nav-item"><a href="contatti.html">Contatti</a></li>
+                  </ul><!--//nav-->
+              </div><!--//navabr-collapse-->
+          </nav><!--//main-nav-->
+      </div><!-- //container -->
+  </nav><!-- //Header LARGE -->
+
+  <!-- Header SMALL -->
+  <nav id="header" class="navbar navbar-fixed-top header hidden-sm hidden-md hidden-lg">
+    <div class="container">
+        <p class="logo-xs pull-left">
+            <a href="index.html">
+                <span class="logo-title">
+                    <img class="miniLogo-xs" src="img/icon.png">
+                </span>
+            </a>
+        </p><!--//logo-->
+        <nav id="main-nav" class="main-nav navbar-right pull-right" role="navigation">
+            <ul class="nav">
+                <li class="item-xs pull-left">
+                  <a class="scrollto" href="index.html#Prezzi"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></a>
+                </li>
+                <li class="item-xs pull-left">
+                  <a href="franchising.html"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span></a>
+                </li>
+                <li class="item-xs pull-left">
+                  <a href="contatti.html"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></a>
+                </li>
+            </ul><!--//nav-->
+        </nav><!--//main-nav-->
+      </div><!-- //container -->
+  </nav><!-- //Header SMALL -->
 
     <!-- Main content -->
     <div id="ChiSiamo" class="bigContainer backWhite">
