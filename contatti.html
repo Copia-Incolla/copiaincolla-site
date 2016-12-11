@@ -22,8 +22,40 @@
     <!-- Animations -->
     <link href='css/animate.min.css' rel='stylesheet' type='text/css'>
     <style>
-        #Contatti h4{
-            line-height: 30px;
+        #Contatti .description div{
+            font-size:.9em;
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+        #Contatti .description div div:first-child{
+                font-style: italic;
+        }
+        #Contatti .description div.mainColor{
+            font-size:1.2em;
+        }
+        @media screen and (max-width: 767px) {
+            #Contatti .description div{
+                margin-bottom: 18px;
+            }
+            #Contatti .description div div{
+                margin-top: 1px;
+                margin-bottom: 1px;
+            }
+        }
+        
+        @media screen and (min-width: 768px) {
+            #Contatti .description div div:first-child{
+                padding-top: 8px;
+                text-align: right;
+            }
+            #Contatti .description div div:nth-child(3n){
+                padding-top: 8px;
+                text-align: left;
+            }
+            #Contatti .description div.mainColor{
+                font-size:28px;
+                text-align: left;
+            }
         }
     </style>
 </head>
@@ -81,36 +113,46 @@
     
     <div id="Contatti" class="bigContainer backWhite">
         <div class="title">STAFF</div>
-        <div class="description container">
-            <div class="col-sm-4" style="text-align:right;">
-                <br>CEO e fondatore
-                <br>CEO
-                <br>Ordini e preventivi
-                <br>Programmatore
-                <br>Back office
-                <br>Magazzino e spedizioni
-                <br>Contabilità
-                <br>Marketing e Social
+        <div class="description container" style="padding:0px;">
+            <div class="col-xs-12">
+                <div class="col-sm-4 col-xs-12">Ordini e preventivi</div>
+                <div class="col-sm-4 col-xs-12 mainColor">Angeloni Davide</div>
+                <div class="col-sm-4 col-xs-12">davidea@copiaincollastore.com</div>
             </div>
-            <div class="col-sm-4" style="text-align:center; font-weight: bold;">
-                <br>Calderoni Giovanni
-                <br>Braga Graziano
-                <br>Angeloni Davide
-                <br>Beltramo Alessandro
-                <br>D??? Miriam
-                <br>Douran Oscar
-                <br>Minetti Fabio
-                <br>Calderoni Clara
+            <div class="col-xs-12">
+                <div class="col-sm-4 col-xs-12">Programmatore</div>
+                <div class="col-sm-4 col-xs-12 mainColor">Beltramo Alessandro</div>
+                <div class="col-sm-4 col-xs-12">alessandrob@copiaincollastore.com</div>
             </div>
-            <div class="col-sm-4" style="text-align:left;">
-                <br>calderoni@copiaincollastore.com
-                <br>graziano@copiaincollastore.com
-                <br>davidea@copiaincollastore.com
-                <br>alessandrob@copiaincollastore.com
-                <br>miriamd@copiaincollastore.com
-                <br>oscar@copiaincollastore.com
-                <br>fabio@copiaincollastore.com
-                <br>clara@copiaincollastore.com
+            <div class="col-xs-12">
+                <div class="col-sm-4 col-xs-12">CEO</div>
+                <div class="col-sm-4 col-xs-12 mainColor">Braga Graziano</div>
+                <div class="col-sm-4 col-xs-12">graziano@copiaincollastore.com</div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-sm-4 col-xs-12">Marketing e Social</div>
+                <div class="col-sm-4 col-xs-12 mainColor">Calderoni Clara</div>
+                <div class="col-sm-4 col-xs-12">clara@copiaincollastore.com</div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-sm-4 col-xs-12">CEO e fondatore</div>
+                <div class="col-sm-4 col-xs-12 mainColor">Calderoni Giovanni</div>
+                <div class="col-sm-4 col-xs-12">calderoni@copiaincollastore.com</div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-sm-4 col-xs-12">Back office</div>
+                <div class="col-sm-4 col-xs-12 mainColor">D'itria Miriam</div>
+                <div class="col-sm-4 col-xs-12">miriamd@copiaincollastore.com</div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-sm-4 col-xs-12">Magazzino e spedizioni</div>
+                <div class="col-sm-4 col-xs-12 mainColor">Douran Oscar</div>
+                <div class="col-sm-4 col-xs-12">oscar@copiaincollastore.com</div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-sm-4 col-xs-12">Contabilità</div>
+                <div class="col-sm-4 col-xs-12 mainColor">Minetti Fabio</div>
+                <div class="col-sm-4 col-xs-12">fabio@copiaincollastore.com</div>
             </div>
         </div>
     </div>
@@ -120,7 +162,7 @@
             <span class="glyphicon glyphicon-chevron-down scrollto" href="#Orari" aria-hidden="true"></span>
         </div>
         <div class="title">Sede</div>
-        <div class="description container">
+        <div class="description container" style="padding:0;">
             <div>
                 Copia&amp;Incolla
                 <br>Via Paolo Casana 4
