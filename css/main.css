@@ -158,6 +158,11 @@ a[href^="tel"]{
     background-size: cover;
 }
 
+.indexCopiaFoto div,
+.indexCopiaFoto img{
+	animation-delay: 1.5s;
+}
+
 .indexCelRotto {
     background: url('../img/iMacBroken.jpg') no-repeat center center;
     background-size: cover;
