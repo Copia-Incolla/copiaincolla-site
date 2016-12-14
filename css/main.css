@@ -14,7 +14,7 @@ body {
 }
 
 a:focus, a:hover {
-    color:white;
+    color:#e52186;
 }
 
 /* Remove styling from ios */
@@ -31,11 +31,39 @@ a[href^="tel"]{
 
 .header {
     padding: 2px 0;
-    background: white;
+    background-color: white;
     width: 100%;
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+		transition: background-color 0.5s ease;
+}
+
+.header.headInvisible{
+	background: none;
+	-webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+	color:white;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.header.headInvisible .main-nav .nav .nav-item a{
+	color:white;
+}
+
+.header.headInvisible .item-xs a{
+	color: white !important;
+}
+
+.header.headInvisible img{
+	visibility: hidden;
+}
+
+.header.headInvisible .nav > li > a:focus, 
+.header.headInvisible .nav > li > a:hover {
+    background: none;
+		text-decoration: underline;
 }
 
 .header .main-nav .navbar-collapse {
@@ -94,7 +122,7 @@ a[href^="tel"]{
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
-    text-decoration: none;
+    text-decoration: underline;
     background-color: #FFF;
 }
 
@@ -218,8 +246,8 @@ a[href^="tel"]{
     vertical-align: middle;
     width: 55px;
     color: #e52186;
-    /*-webkit-animation: bounce 2s 0.5s infinite;
-    animation: bounce 2s 0.5s infinite;*/
+    -webkit-animation: bounce 2s 1s 4;
+    animation: bounce 2s 1s 4;
     cursor: pointer;
 }
 

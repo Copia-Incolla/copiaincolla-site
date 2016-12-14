@@ -26,7 +26,8 @@ function initializeGMap(posizione){
       mapTypeId:google.maps.MapTypeId.ROADMAP,
       disableDefaultUI: false,
       scrollwheel: false,
-      draggable: false
+      draggable: false,
+			mapTypeControl: false,
     };
 
     map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
@@ -37,8 +38,14 @@ function initializeGMap(posizione){
       title:"Negozio a "+posizioni[posizione][1]
     });
 
+		var posPulita = posizioni[posizione][0] + "";
+		posPulita = posPulita.replace("(","")
+												 .replace(")","")
+												 .replace(" ","");
     var infowindow = new google.maps.InfoWindow({
-      content: "<h4>" + posizioni[posizione][1] + "</h4>Premi su una via per visualizzarla sulla mappa."
+      content: "<h4>" + posizioni[posizione][1] + 
+							 "</h4>Apri la mappa completa su " +
+							 "<a class='' href='https://www.google.it/maps/@"+posPulita+",14z' target='_blank'>Google Maps</a>"
     });
 
     marker.setMap(map);
@@ -52,7 +59,8 @@ function mapBig(){
       mapTypeId:google.maps.MapTypeId.ROADMAP,
       disableDefaultUI: false,
       scrollwheel: false,
-      draggable: true
+      draggable: true,
+			mapTypeControl: false,
     };
 
     map = new google.maps.Map(document.getElementById("googleMap"),mapProp);

@@ -19,6 +19,19 @@ $(".scrollto").on('click', function(e) {
 
 });
 
+var DoScroll = true; // Se la setto a false non fa l'animazione (pagina contatti)
+$(document).scroll(function(){
+		if(DoScroll){
+			var $this = $(this);
+			if ($this.scrollTop() > 120) {
+				$(".header").removeClass("headInvisible");
+			}
+			else{
+				$(".header").addClass("headInvisible");
+			}
+		}
+});
+
 /* ANDROID HACK 
  * see: http://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome
  */

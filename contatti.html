@@ -111,10 +111,7 @@
 
     <!-- Main content -->
     <div id="Orari" class="bigContainer backWhite">
-        <div class="footerBigCont">
-            <span class="glyphicon glyphicon-chevron-down scrollto" href="#Orari" aria-hidden="true"></span>
-        </div>
-        <div class="title">Sede</div>
+        <div class="title wow fadeInUp">Sede</div>
         <div class="description container" style="padding:0;">
             <div>
 							<b>Copia&amp;Incolla</b>
@@ -159,39 +156,39 @@
     <div id="googleMap" class="bigContainer" style="min-height:90%; padding:0;"></div>
 	
 		<div id="Contatti" class="bigContainer backWhite">
-					<div class="title">STAFF</div>
+					<div class="title wow fadeInUp">STAFF</div>
 					<div class="description container" style="padding:0px;">
-							<div class="col-xs-12">
+							<div class="col-xs-12 wow fadeIn">
 									<div class="col-sm-4 col-xs-12">Ordini e preventivi</div>
 									<div class="col-sm-4 col-xs-12 mainColor">Angeloni Davide</div>
 									<div class="col-sm-4 col-xs-12">davidea@copiaincollastore.com</div>
 							</div>
-							<div class="col-xs-12">
+							<div class="col-xs-12 wow fadeIn">
 									<div class="col-sm-4 col-xs-12">Developer</div>
 									<div class="col-sm-4 col-xs-12 mainColor">Beltramo Alessandro</div>
 									<div class="col-sm-4 col-xs-12">alessandrob@copiaincollastore.com</div>
 							</div>
-							<div class="col-xs-12">
+							<div class="col-xs-12 wow fadeIn">
 									<div class="col-sm-4 col-xs-12">CEO</div>
 									<div class="col-sm-4 col-xs-12 mainColor">Braga Graziano</div>
 									<div class="col-sm-4 col-xs-12">graziano@copiaincollastore.com</div>
 							</div>
-							<div class="col-xs-12">
+							<div class="col-xs-12 wow fadeIn">
 									<div class="col-sm-4 col-xs-12">Marketing e Social</div>
 									<div class="col-sm-4 col-xs-12 mainColor">Calderoni Clara</div>
 									<div class="col-sm-4 col-xs-12">clara@copiaincollastore.com</div>
 							</div>
-							<div class="col-xs-12">
+							<div class="col-xs-12 wow fadeIn">
 									<div class="col-sm-4 col-xs-12">CEO e fondatore</div>
 									<div class="col-sm-4 col-xs-12 mainColor">Calderoni Giovanni</div>
 									<div class="col-sm-4 col-xs-12">calderoni@copiaincollastore.com</div>
 							</div>
-							<div class="col-xs-12">
+							<div class="col-xs-12 wow fadeIn">
 									<div class="col-sm-4 col-xs-12">Back office</div>
 									<div class="col-sm-4 col-xs-12 mainColor">D'itria Miriam</div>
 									<div class="col-sm-4 col-xs-12">miriamd@copiaincollastore.com</div>
 							</div>
-							<div class="col-xs-12">
+							<div class="col-xs-12 wow fadeIn">
 									<div class="col-sm-4 col-xs-12">Magazzino e spedizioni</div>
 									<div class="col-sm-4 col-xs-12 mainColor">Douran Oscar</div>
 									<div class="col-sm-4 col-xs-12">oscar@copiaincollastore.com</div>
@@ -241,10 +238,13 @@
     <script type="text/javascript" src="js/effects.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBzH1sAa5EnWvlWe1cCZ32EcE3G_go6gI"></script>
     <script type='text/javascript' src="js/GMaps.js"></script>
+		<script type="text/javascript" src="js/wow.min.js"></script>
+    <script>new WOW().init();</script>
 		<script>
 			$(function() {
 				initializeGMap("CopiaVerbania");
 			});
+			DoScroll = false; // per non far andare l'animazione dell'header
 		</script>
 </body>
 </html>
