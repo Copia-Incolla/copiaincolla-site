@@ -229,10 +229,12 @@ a[href^="tel"]{
 .square-wall{
     position: relative;
     margin-bottom: 10px;
+    min-height: 100px;
 }
 
 .square-wall .image{
-    height: 140px;
+    width: 100%;
+    max-width: 150px;
     display: block;
     margin: auto;
 }
