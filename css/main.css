@@ -225,6 +225,43 @@ a[href^="tel"]{
   text-decoration: underline;
 }
 
+/* *** */
+.square-wall{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.square-wall .image{
+    height: 140px;
+    display: block;
+    margin: auto;
+}
+
+.square-wall .overlay{
+    color: #e52186;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.wall-hidden{
+    background-color: white;
+    border-radius: 5px;
+    color: #e52186;
+    box-shadow: inset 0 0 2px #e52186;
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.wall-selected{
+    box-shadow: 0px 0px 5px rgba(229, 33, 134, .5);
+    border-radius: 10px;
+}
+
+
 /* Reduce top offset in description panels */
 .backWhite .title{
     margin-top: 100px;
